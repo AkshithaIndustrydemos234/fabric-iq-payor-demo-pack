@@ -1,0 +1,6 @@
+expression 'DirectLake - payor_model' =
+		let
+			Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/<WORKSPACE_ITEM_ID>/<LAKEHOUSE_ITEM_ID>", [HierarchicalNavigation=true])
+		in
+			Source
+

@@ -1,0 +1,46 @@
+/// Person dimension at one row per person; tracks Prospect, Applicant, and Active Member status.
+table contacts
+
+	column contact_id
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		summarizeBy: none
+		sourceColumn: contact_id
+
+	column full_name
+		dataType: string
+		sourceColumn: full_name
+
+	column year_of_birth
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: year_of_birth
+
+	column region
+		dataType: string
+		sourceColumn: region
+
+	column employment_status
+		dataType: string
+		sourceColumn: employment_status
+
+	column prior_coverage
+		dataType: string
+		sourceColumn: prior_coverage
+
+	column contact_status
+		dataType: string
+		sourceColumn: contact_status
+
+	column subscriber_no
+		dataType: string
+		summarizeBy: none
+		sourceColumn: subscriber_no
+
+	partition contacts = entity
+		mode: directLake
+		source
+			entityName: contacts
+			expressionSource: 'DirectLake - payor_model'
+

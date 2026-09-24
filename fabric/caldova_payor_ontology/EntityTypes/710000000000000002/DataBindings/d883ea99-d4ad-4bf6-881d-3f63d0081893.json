@@ -1,0 +1,46 @@
+{
+  "id": "d883ea99-d4ad-4bf6-881d-3f63d0081893",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "contact_id",
+        "targetPropertyId": "710000000000000201"
+      },
+      {
+        "sourceColumnName": "full_name",
+        "targetPropertyId": "710000000000000202"
+      },
+      {
+        "sourceColumnName": "year_of_birth",
+        "targetPropertyId": "710000000000000203"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "710000000000000204"
+      },
+      {
+        "sourceColumnName": "employment_status",
+        "targetPropertyId": "710000000000000205"
+      },
+      {
+        "sourceColumnName": "prior_coverage",
+        "targetPropertyId": "710000000000000206"
+      },
+      {
+        "sourceColumnName": "contact_status",
+        "targetPropertyId": "710000000000000207"
+      },
+      {
+        "sourceColumnName": "subscriber_no",
+        "targetPropertyId": "710000000000000208"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "<WORKSPACE_ITEM_ID>",
+      "itemId": "<LAKEHOUSE_ITEM_ID>",
+      "sourceTableName": "contacts"
+    }
+  }
+}

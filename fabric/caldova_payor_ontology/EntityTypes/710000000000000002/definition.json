@@ -1,0 +1,80 @@
+{
+  "namespace": "usertypes",
+  "id": "710000000000000002",
+  "name": "contacts",
+  "namespaceType": "Custom",
+  "baseEntityTypeId": null,
+  "visibility": "Visible",
+  "entityIdParts": [
+    "710000000000000201"
+  ],
+  "displayNamePropertyId": "710000000000000201",
+  "properties": [
+    {
+      "id": "710000000000000201",
+      "name": "contact_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000202",
+      "name": "full_name",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000203",
+      "name": "year_of_birth",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "710000000000000204",
+      "name": "region",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000205",
+      "name": "employment_status",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000206",
+      "name": "prior_coverage",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000207",
+      "name": "contact_status",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000208",
+      "name": "subscriber_no",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [],
+  "description": "A person who applies to Caldova Health Plan. Moves Prospect → Applicant → Active Member and receives a subscriber (MNR-) number only on enrollment. There is no separate member table — the member is a Contact who became active.",
+  "synonyms": [
+    "member",
+    "applicant",
+    "person",
+    "enrollee",
+    "prospect",
+    "subscriber"
+  ]
+}

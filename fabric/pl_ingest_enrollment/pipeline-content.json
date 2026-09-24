@@ -1,0 +1,488 @@
+{
+  "properties": {
+    "description": "Ingests enrollment CSVs into the bronze layer, validates them, promotes the data through silver and gold, then runs gold readiness checks before publication.",
+    "activities": [
+      {
+        "name": "CD_Load_Bronze_Applications",
+        "type": "Copy",
+        "description": "Copies the raw applications CSV from the lakehouse Files area into the bronze applications table, overwriting the schema on each run.",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "DelimitedTextSource",
+            "storeSettings": {
+              "type": "LakehouseReadSettings",
+              "recursive": true
+            },
+            "formatSettings": {
+              "type": "DelimitedTextReadSettings"
+            },
+            "datasetSettings": {
+              "type": "DelimitedText",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "fileName": "applications.csv",
+                  "folderPath": "Files"
+                },
+                "columnDelimiter": ",",
+                "escapeChar": "\\",
+                "firstRowAsHeader": true,
+                "quoteChar": "\""
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "payor_lh",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "<WORKSPACE_ITEM_ID>",
+                    "artifactId": "<LAKEHOUSE_ITEM_ID>",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "applications"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "payor_lh",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "<WORKSPACE_ITEM_ID>",
+                    "artifactId": "<LAKEHOUSE_ITEM_ID>",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "enableStaging": false,
+          "translator": {
+            "type": "TabularTranslator",
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          }
+        }
+      },
+      {
+        "name": "CD_Load_Bronze_Contacts",
+        "type": "Copy",
+        "description": "Copies the raw contacts CSV from the lakehouse Files area into the bronze contacts table, overwriting the schema on each run.",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "DelimitedTextSource",
+            "storeSettings": {
+              "type": "LakehouseReadSettings",
+              "recursive": true
+            },
+            "formatSettings": {
+              "type": "DelimitedTextReadSettings"
+            },
+            "datasetSettings": {
+              "type": "DelimitedText",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "fileName": "contacts.csv",
+                  "folderPath": "Files"
+                },
+                "columnDelimiter": ",",
+                "escapeChar": "\\",
+                "firstRowAsHeader": true,
+                "quoteChar": "\""
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "payor_lh",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "<WORKSPACE_ITEM_ID>",
+                    "artifactId": "<LAKEHOUSE_ITEM_ID>",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "contacts"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "payor_lh",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "<WORKSPACE_ITEM_ID>",
+                    "artifactId": "<LAKEHOUSE_ITEM_ID>",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "enableStaging": false,
+          "translator": {
+            "type": "TabularTranslator",
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          }
+        }
+      },
+      {
+        "name": "CD_Load_Bronze_Plans",
+        "type": "Copy",
+        "description": "Copies the raw plans CSV from the lakehouse Files area into the bronze plans table, overwriting the schema on each run.",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "DelimitedTextSource",
+            "storeSettings": {
+              "type": "LakehouseReadSettings",
+              "recursive": true
+            },
+            "formatSettings": {
+              "type": "DelimitedTextReadSettings"
+            },
+            "datasetSettings": {
+              "type": "DelimitedText",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "fileName": "plans.csv",
+                  "folderPath": "Files"
+                },
+                "columnDelimiter": ",",
+                "escapeChar": "\\",
+                "firstRowAsHeader": true,
+                "quoteChar": "\""
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "payor_lh",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "<WORKSPACE_ITEM_ID>",
+                    "artifactId": "<LAKEHOUSE_ITEM_ID>",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "plans"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "payor_lh",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "<WORKSPACE_ITEM_ID>",
+                    "artifactId": "<LAKEHOUSE_ITEM_ID>",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "enableStaging": false,
+          "translator": {
+            "type": "TabularTranslator",
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          }
+        }
+      },
+      {
+        "name": "CD_Load_Bronze_Eligibility",
+        "type": "Copy",
+        "description": "Copies the raw eligibility CSV from the lakehouse Files area into the bronze eligibility table, overwriting the schema on each run.",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "DelimitedTextSource",
+            "storeSettings": {
+              "type": "LakehouseReadSettings",
+              "recursive": true
+            },
+            "formatSettings": {
+              "type": "DelimitedTextReadSettings"
+            },
+            "datasetSettings": {
+              "type": "DelimitedText",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "fileName": "eligibility.csv",
+                  "folderPath": "Files"
+                },
+                "columnDelimiter": ",",
+                "escapeChar": "\\",
+                "firstRowAsHeader": true,
+                "quoteChar": "\""
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "payor_lh",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "<WORKSPACE_ITEM_ID>",
+                    "artifactId": "<LAKEHOUSE_ITEM_ID>",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "eligibility"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "payor_lh",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "<WORKSPACE_ITEM_ID>",
+                    "artifactId": "<LAKEHOUSE_ITEM_ID>",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "enableStaging": false,
+          "translator": {
+            "type": "TabularTranslator",
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          }
+        }
+      },
+      {
+        "name": "NB_Bronze_Data_Validation",
+        "type": "TridentNotebook",
+        "description": "Validates the four bronze tables after ingestion: checks row counts against the source files, confirms primary keys are present and unique, and flags null or malformed values before any transformation runs.",
+        "dependsOn": [
+          {
+            "activity": "CD_Load_Bronze_Applications",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "CD_Load_Bronze_Contacts",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "CD_Load_Bronze_Plans",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "CD_Load_Bronze_Eligibility",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "<NOTEBOOK_ITEM_ID>",
+          "workspaceId": "<WORKSPACE_ITEM_ID>"
+        }
+      },
+      {
+        "name": "NB_Bronze_To_Silver",
+        "type": "TridentNotebook",
+        "description": "Transforms the validated bronze tables into the silver layer: standardises column names and data types, trims and normalises text values, removes duplicate records and applies referential joins across applications, contacts, plans and eligibility.",
+        "dependsOn": [
+          {
+            "activity": "NB_Bronze_Data_Validation",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "<NOTEBOOK_ITEM_ID>",
+          "workspaceId": "<WORKSPACE_ITEM_ID>"
+        }
+      },
+      {
+        "name": "NB_Silver_To_Gold",
+        "type": "TridentNotebook",
+        "description": "Builds the curated gold layer from silver: derives enrollment status and eligibility-check measures, applies business definitions, and produces the aggregated tables consumed by the semantic model, ontology and data agent.",
+        "dependsOn": [
+          {
+            "activity": "NB_Bronze_To_Silver",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "<NOTEBOOK_ITEM_ID>",
+          "workspaceId": "<WORKSPACE_ITEM_ID>"
+        }
+      },
+      {
+        "name": "DQ_Gold_Readiness",
+        "type": "Lookup",
+        "description": "Validates enrollment counts, exception records and reference integrity prior to publication.",
+        "dependsOn": [
+          {
+            "activity": "NB_Silver_To_Gold",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "source": {
+            "type": "LakehouseTableSource",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "applications"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "payor_lh",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "workspaceId": "<WORKSPACE_ITEM_ID>",
+                    "artifactId": "<LAKEHOUSE_ITEM_ID>",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "firstRowOnly": true
+        }
+      }
+    ],
+    "annotations": []
+  }
+}

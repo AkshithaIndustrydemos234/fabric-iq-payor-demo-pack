@@ -1,0 +1,15 @@
+{
+  "namespace": "usertypes",
+  "id": "720000000000000003",
+  "name": "eligibility_of_application",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "710000000000000004"
+  },
+  "target": {
+    "entityTypeId": "710000000000000001"
+  },
+  "sourcePropertyId": "710000000000000402",
+  "targetPropertyId": "710000000000000101",
+  "description": "Links the six-check eligibility result to its application; lets the agent explain WHY an application needs human review (which check failed, routing, notes)."
+}

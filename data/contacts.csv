@@ -1,0 +1,51 @@
+contact_id,full_name,year_of_birth,region,employment_status,prior_coverage,contact_status,subscriber_no
+CNT-20001,Reed F.,1985,West,Employed,No,Active Member,MNR-50001
+CNT-20002,Olivia W.,1979,South,Employed,Yes,Active Member,MNR-50002
+CNT-20003,Jordan M.,1990,Midwest,Self-employed,No,Active Member,MNR-50003
+CNT-20004,Alex J.,1982,Northeast,Employed,Yes,Active Member,MNR-50004
+CNT-20005,Kayla L.,1995,West,Employed,No,Applicant,
+CNT-20006,Devon T.,1988,South,Self-employed,No,Applicant,
+CNT-20007,Amber R.,1979,West,Employed,Yes,Applicant,
+CNT-20008,Hailey C.,1986,Midwest,Employed,No,Active Member,MNR-50005
+CNT-20009,Kai C.,1992,Northeast,Employed,No,Active Member,MNR-50006
+CNT-20010,Morgan C.,1983,West,Self-employed,Yes,Active Member,MNR-50007
+CNT-20011,Elizabeth M.,1975,Midwest,Employed,No,Applicant,
+CNT-20012,Jasmine M.,1991,South,Employed,Yes,Active Member,MNR-50008
+CNT-20013,Logan E.,1987,West,Employed,No,Active Member,MNR-50009
+CNT-20014,Preston M.,1968,Northeast,Employed,Yes,Applicant,
+CNT-20015,Madison B.,1984,Midwest,Employed,No,Active Member,MNR-50010
+CNT-20016,Remy M.,1993,South,Self-employed,No,Applicant,
+CNT-20017,Nicole W.,1989,West,Employed,Yes,Active Member,MNR-50011
+CNT-20018,Riley R.,1981,Northeast,Employed,No,Applicant,
+CNT-20019,Grace T.,1977,South,Employed,Yes,Active Member,MNR-50012
+CNT-20020,Parker M.,1994,Northeast,Employed,No,Active Member,MNR-50013
+CNT-20021,Cameron B.,1985,West,Self-employed,No,Active Member,MNR-50014
+CNT-20022,Quinn C.,1990,Midwest,Employed,No,Applicant,
+CNT-20023,Harvey F.,1972,West,Employed,Yes,Applicant,
+CNT-20024,Ellis T.,1988,South,Employed,No,Active Member,MNR-50015
+CNT-20025,Jamie E.,1983,Northeast,Employed,Yes,Active Member,MNR-50016
+CNT-20026,Casey J.,1996,West,Employed,No,Prospect,
+CNT-20027,Renata H.,1980,Midwest,Self-employed,No,Applicant,
+CNT-20028,Robin K.,1987,South,Employed,Yes,Active Member,MNR-50017
+CNT-20029,Rory N.,1991,West,Employed,No,Applicant,
+CNT-20030,Rowan M.,1989,Northeast,Employed,No,Active Member,MNR-50018
+CNT-20031,Monica T.,1978,Midwest,Employed,Yes,Active Member,MNR-50019
+CNT-20032,Kendall C.,1993,South,Self-employed,No,Active Member,MNR-50020
+CNT-20033,Adrian K.,1986,West,Employed,No,Active Member,MNR-50021
+CNT-20034,Abigail J.,1984,Northeast,Employed,Yes,Active Member,MNR-50022
+CNT-20035,Eugenia L.,1990,Midwest,Employed,No,Applicant,
+CNT-20036,Preston Q.,1992,South,Employed,No,Active Member,MNR-50023
+CNT-20037,Ashley S.,1981,West,Employed,Yes,Active Member,MNR-50024
+CNT-20038,Hayden C.,1987,Northeast,Self-employed,No,Active Member,MNR-50025
+CNT-20039,Mikaela L.,1994,Midwest,Employed,No,Active Member,MNR-50026
+CNT-20040,Jessie I.,1985,South,Employed,Yes,Active Member,MNR-50027
+CNT-20041,Kerry A.,1989,West,Employed,No,Active Member,MNR-50028
+CNT-20042,Brooke G.,1991,Northeast,Employed,No,Active Member,MNR-50029
+CNT-20043,Ana B.,1983,Midwest,Employed,Yes,Active Member,MNR-50030
+CNT-20044,Cora T.,1995,South,Self-employed,No,Active Member,MNR-50031
+CNT-20045,Amari R.,1988,West,Employed,No,Active Member,MNR-50032
+CNT-20046,Patti T.,1980,Northeast,Employed,Yes,Active Member,MNR-50033
+CNT-20047,Kendrall C.,1992,Midwest,Employed,No,Active Member,MNR-50034
+CNT-20048,Quinn D.,1990,South,Employed,No,Prospect,
+CNT-20049,Marcus B.,1986,West,Employed,Yes,Active Member,MNR-50035
+CNT-20050,Nadia P.,1993,Northeast,Employed,No,Active Member,MNR-50036

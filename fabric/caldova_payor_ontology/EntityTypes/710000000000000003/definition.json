@@ -1,0 +1,66 @@
+{
+  "namespace": "usertypes",
+  "id": "710000000000000003",
+  "name": "plans",
+  "namespaceType": "Custom",
+  "baseEntityTypeId": null,
+  "visibility": "Visible",
+  "entityIdParts": [
+    "710000000000000301"
+  ],
+  "displayNamePropertyId": "710000000000000301",
+  "properties": [
+    {
+      "id": "710000000000000301",
+      "name": "plan_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000302",
+      "name": "plan_name",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000303",
+      "name": "plan_tier",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000304",
+      "name": "plan_type",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000305",
+      "name": "monthly_premium",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "710000000000000306",
+      "name": "description",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [],
+  "description": "A Caldova coverage plan an applicant can choose. Three tiers from entry (Essentials) to comprehensive (Premium). The description doubles as grounding for plan/benefit questions.",
+  "synonyms": [
+    "plan",
+    "coverage",
+    "product",
+    "tier",
+    "policy",
+    "benefit"
+  ]
+}

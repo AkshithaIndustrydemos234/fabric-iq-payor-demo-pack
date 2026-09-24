@@ -1,0 +1,62 @@
+{
+  "id": "87e35782-e8f6-4113-a22d-1a8ca4055ad3",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "application_id",
+        "targetPropertyId": "710000000000000101"
+      },
+      {
+        "sourceColumnName": "contact_id",
+        "targetPropertyId": "710000000000000102"
+      },
+      {
+        "sourceColumnName": "applicant_name",
+        "targetPropertyId": "710000000000000103"
+      },
+      {
+        "sourceColumnName": "region",
+        "targetPropertyId": "710000000000000104"
+      },
+      {
+        "sourceColumnName": "plan_id",
+        "targetPropertyId": "710000000000000105"
+      },
+      {
+        "sourceColumnName": "channel",
+        "targetPropertyId": "710000000000000106"
+      },
+      {
+        "sourceColumnName": "status",
+        "targetPropertyId": "710000000000000107"
+      },
+      {
+        "sourceColumnName": "priority",
+        "targetPropertyId": "710000000000000108"
+      },
+      {
+        "sourceColumnName": "owner",
+        "targetPropertyId": "710000000000000109"
+      },
+      {
+        "sourceColumnName": "days_waiting",
+        "targetPropertyId": "710000000000000110"
+      },
+      {
+        "sourceColumnName": "period_label",
+        "targetPropertyId": "710000000000000111"
+      },
+      {
+        "sourceColumnName": "member_id",
+        "targetPropertyId": "710000000000000112"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "<WORKSPACE_ITEM_ID>",
+      "itemId": "<LAKEHOUSE_ITEM_ID>",
+      "sourceTableName": "applications"
+    }
+  }
+}

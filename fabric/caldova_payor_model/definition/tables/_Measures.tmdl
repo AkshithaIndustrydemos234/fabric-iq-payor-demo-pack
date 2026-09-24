@@ -1,0 +1,103 @@
+/// Dedicated home for approved Caldova Health Plan enrollment and eligibility measures.
+table _Measures
+
+	/// Total number of applications in the current filter context.
+	measure 'Total applications' = COUNTROWS ( applications )
+		formatString: #,##0
+
+	/// Applications whose lifecycle status is Enrolled.
+	measure Enrolled = CALCULATE ( [Total applications], applications[status] = "Enrolled" )
+		formatString: #,##0
+
+	/// Applications whose lifecycle status is In progress.
+	measure 'In progress' = CALCULATE ( [Total applications], applications[status] = "In progress" )
+		formatString: #,##0
+
+	/// Applications whose lifecycle status is New.
+	measure New = CALCULATE ( [Total applications], applications[status] = "New" )
+		formatString: #,##0
+
+	/// Applications whose lifecycle status is Exception.
+	measure Exceptions = CALCULATE ( [Total applications], applications[status] = "Exception" )
+		formatString: #,##0
+
+	/// New, in-progress, and exception applications combined.
+	measure 'Open applications' = [New] + [In progress] + [Exceptions]
+		formatString: #,##0
+
+	/// Share of total applications that are enrolled.
+	measure 'Enrolled rate' = DIVIDE ( [Enrolled], [Total applications] )
+		formatString: 0.0%
+
+	/// Share of total applications in exception status.
+	measure 'Exception rate' = DIVIDE ( [Exceptions], [Total applications] )
+		formatString: 0.0%
+
+	/// Share of applications that remain open.
+	measure 'Open rate' = DIVIDE ( [Open applications], [Total applications] )
+		formatString: 0.0%
+
+	/// Average waiting time across applications.
+	measure 'Avg days waiting' = AVERAGE ( applications[days_waiting] )
+		formatString: #,##0.0
+
+	/// Average waiting time for applications not yet enrolled.
+	measure 'Avg days waiting (open)' = CALCULATE ( AVERAGE ( applications[days_waiting] ), applications[status] <> "Enrolled" )
+		formatString: #,##0.0
+
+	/// Maximum waiting time across applications.
+	measure 'Max days waiting' = MAX ( applications[days_waiting] )
+		formatString: #,##0
+
+	/// Maximum waiting time among applications not yet enrolled.
+	measure 'Oldest open case (days)' = CALCULATE ( [Max days waiting], applications[status] <> "Enrolled" )
+		formatString: #,##0
+
+	/// Applications marked with Urgent priority.
+	measure 'Urgent applications' = CALCULATE ( [Total applications], applications[priority] = "Urgent" )
+		formatString: #,##0
+
+	/// People whose contact status is Active Member.
+	measure 'Active members' = CALCULATE ( COUNTROWS ( contacts ), contacts[contact_status] = "Active Member" )
+		formatString: #,##0
+
+	/// People whose contact status is Applicant.
+	measure Applicants = CALCULATE ( COUNTROWS ( contacts ), contacts[contact_status] = "Applicant" )
+		formatString: #,##0
+
+	/// People whose contact status is Prospect.
+	measure Prospects = CALCULATE ( COUNTROWS ( contacts ), contacts[contact_status] = "Prospect" )
+		formatString: #,##0
+
+	/// Eligibility cases whose result is Needs review.
+	measure 'Needs review' = CALCULATE ( COUNTROWS ( eligibility ), eligibility[eligibility_result] = "Needs review" )
+		formatString: #,##0
+
+	/// Eligibility cases whose result is Eligible.
+	measure 'Eligible (cleared)' = CALCULATE ( COUNTROWS ( eligibility ), eligibility[eligibility_result] = "Eligible" )
+		formatString: #,##0
+
+	/// Eligibility cases whose result is Pending.
+	measure 'Pending eligibility' = CALCULATE ( COUNTROWS ( eligibility ), eligibility[eligibility_result] = "Pending" )
+		formatString: #,##0
+
+	/// Eligibility cases failing the clinical check.
+	measure 'Clinical failures' = CALCULATE ( COUNTROWS ( eligibility ), eligibility[check_clinical] = "Fail" )
+		formatString: #,##0
+
+	/// Eligibility cases failing the service-area check.
+	measure 'Service-area failures' = CALCULATE ( COUNTROWS ( eligibility ), eligibility[check_service_area] = "Fail" )
+		formatString: #,##0
+
+	/// Eligibility cases failing the enrollment-period check.
+	measure 'Enrollment-period failures' = CALCULATE ( COUNTROWS ( eligibility ), eligibility[check_enrollment_period] = "Fail" )
+		formatString: #,##0
+
+	column _Placeholder
+		isNameInferred
+		sourceColumn: [_Placeholder]
+
+	partition _Measures = calculated
+		mode: import
+		source = ROW ( "_Placeholder", BLANK () )
+

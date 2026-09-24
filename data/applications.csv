@@ -1,0 +1,51 @@
+application_id,contact_id,applicant_name,region,plan_id,channel,status,priority,owner,days_waiting,period_label,member_id
+APP-10001,CNT-20001,Reed F.,West,PLN-02,Online,Enrolled,Standard,Priya,,This week,MNR-50001
+APP-10002,CNT-20002,Olivia W.,South,PLN-01,Broker,Enrolled,Standard,Priya,,This week,MNR-50002
+APP-10003,CNT-20003,Jordan M.,Midwest,PLN-03,Online,Enrolled,Standard,Priya,,This week,MNR-50003
+APP-10004,CNT-20004,Alex J.,Northeast,PLN-02,Phone,Enrolled,Standard,Bala K,,This week,MNR-50004
+APP-10005,CNT-20005,Kayla L.,West,PLN-02,Online,In progress,Standard,Priya,6,This week,
+APP-10006,CNT-20006,Devon T.,South,PLN-03,Phone,In progress,Standard,Tanuja R,3,This week,
+APP-10007,CNT-20007,Amber R.,West,PLN-01,Online,Exception,Urgent,Priya,7,This week,
+APP-10008,CNT-20008,Hailey C.,Midwest,PLN-02,Broker,Enrolled,Standard,Akshitha M,,This week,MNR-50005
+APP-10009,CNT-20009,Kai C.,Northeast,PLN-03,Online,Enrolled,Standard,Tanuja R,,This week,MNR-50006
+APP-10010,CNT-20010,Morgan C.,West,PLN-02,Online,Enrolled,Standard,Sampat P,,This week,MNR-50007
+APP-10011,CNT-20011,Elizabeth M.,Midwest,PLN-02,Phone,In progress,Standard,Tanuja R,5,This week,
+APP-10012,CNT-20012,Jasmine M.,South,PLN-01,Online,Enrolled,Standard,Lili M,,This week,MNR-50008
+APP-10013,CNT-20013,Logan E.,West,PLN-03,Online,Enrolled,Standard,Priya,,This week,MNR-50009
+APP-10014,CNT-20014,Preston M.,Northeast,PLN-01,Broker,Exception,Urgent,Priya,9,This week,
+APP-10015,CNT-20015,Madison B.,Midwest,PLN-02,Online,Enrolled,Standard,Priya,,This week,MNR-50010
+APP-10016,CNT-20016,Remy M.,South,PLN-03,Phone,In progress,Standard,Priya,7,This week,
+APP-10017,CNT-20017,Nicole W.,West,PLN-02,Online,Enrolled,Standard,Priya,,This week,MNR-50011
+APP-10018,CNT-20018,Riley R.,Northeast,PLN-02,Online,Exception,Urgent,Priya,6,This week,
+APP-10019,CNT-20019,Grace T.,South,PLN-01,Broker,Enrolled,Standard,Bala K,,This week,MNR-50012
+APP-10020,CNT-20020,Parker M.,Northeast,PLN-03,Phone,Enrolled,Standard,Akshitha M,,This week,MNR-50013
+APP-10021,CNT-20021,Cameron B.,West,PLN-02,Online,Enrolled,Standard,Tanuja R,,This week,MNR-50014
+APP-10022,CNT-20022,Quinn C.,Midwest,PLN-03,Phone,In progress,Standard,Tanuja R,4,This week,
+APP-10023,CNT-20023,Harvey F.,West,PLN-01,Online,Exception,Urgent,Priya,8,This week,
+APP-10024,CNT-20024,Ellis T.,South,PLN-02,Online,Enrolled,Standard,Sampat P,,This week,MNR-50015
+APP-10025,CNT-20025,Jamie E.,Northeast,PLN-02,Broker,Enrolled,Standard,Lili M,,This week,MNR-50016
+APP-10026,CNT-20026,Casey J.,West,PLN-03,Online,New,Standard,Lili M,2,This week,
+APP-10027,CNT-20027,Renata H.,Midwest,PLN-02,Phone,Exception,Urgent,Sampat P,10,This week,
+APP-10028,CNT-20028,Robin K.,South,PLN-01,Online,Enrolled,Standard,Priya,,This week,MNR-50017
+APP-10029,CNT-20029,Rory N.,West,PLN-03,Online,In progress,Standard,Priya,2,This week,
+APP-10030,CNT-20030,Rowan M.,Northeast,PLN-02,Phone,Enrolled,Standard,Priya,,This week,MNR-50018
+APP-10031,CNT-20031,Monica T.,Midwest,PLN-01,Online,Enrolled,Standard,Priya,,This week,MNR-50019
+APP-10032,CNT-20032,Kendall C.,South,PLN-03,Online,Enrolled,Standard,Bala K,,This week,MNR-50020
+APP-10033,CNT-20033,Adrian K.,West,PLN-02,Online,Enrolled,Standard,Akshitha M,,This week,MNR-50021
+APP-10034,CNT-20034,Abigail J.,Northeast,PLN-02,Broker,Enrolled,Standard,Tanuja R,,This week,MNR-50022
+APP-10035,CNT-20035,Eugenia L.,Midwest,PLN-03,Phone,In progress,Standard,Tanuja R,6,This week,
+APP-10036,CNT-20036,Preston Q.,South,PLN-02,Online,Enrolled,Standard,Sampat P,,This week,MNR-50023
+APP-10037,CNT-20037,Ashley S.,West,PLN-01,Online,Enrolled,Standard,Lili M,,This week,MNR-50024
+APP-10038,CNT-20038,Hayden C.,Northeast,PLN-03,Phone,Enrolled,Standard,Priya,,This week,MNR-50025
+APP-10039,CNT-20039,Mikaela L.,Midwest,PLN-02,Online,Enrolled,Standard,Priya,,This week,MNR-50026
+APP-10040,CNT-20040,Jessie I.,South,PLN-01,Online,Enrolled,Standard,Priya,,This week,MNR-50027
+APP-10041,CNT-20041,Kerry A.,West,PLN-02,Online,Enrolled,Standard,Bala K,,This week,MNR-50028
+APP-10042,CNT-20042,Brooke G.,Northeast,PLN-03,Phone,Enrolled,Standard,Akshitha M,,This week,MNR-50029
+APP-10043,CNT-20043,Ana B.,Midwest,PLN-02,Broker,Enrolled,Standard,Tanuja R,,This week,MNR-50030
+APP-10044,CNT-20044,Cora T.,South,PLN-03,Online,Enrolled,Standard,Sampat P,,This week,MNR-50031
+APP-10045,CNT-20045,Amari R.,West,PLN-02,Online,Enrolled,Standard,Lili M,,This week,MNR-50032
+APP-10046,CNT-20046,Patti T.,Northeast,PLN-01,Online,Enrolled,Standard,Priya,,This week,MNR-50033
+APP-10047,CNT-20047,Kendrall C.,Midwest,PLN-03,Phone,Enrolled,Standard,Priya,,This week,MNR-50034
+APP-10048,CNT-20048,Quinn D.,South,PLN-02,Online,New,Standard,Lili M,1,This week,
+APP-10049,CNT-20049,Marcus B.,West,PLN-01,Online,Enrolled,Standard,Priya,,This week,MNR-50035
+APP-10050,CNT-20050,Nadia P.,Northeast,PLN-03,Phone,Enrolled,Standard,Bala K,,This week,MNR-50036

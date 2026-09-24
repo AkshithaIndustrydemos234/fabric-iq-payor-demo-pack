@@ -1,0 +1,62 @@
+{
+  "id": "b49fee47-eaf4-4e46-8121-cf84e69b65e5",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "eligibility_id",
+        "targetPropertyId": "710000000000000401"
+      },
+      {
+        "sourceColumnName": "application_id",
+        "targetPropertyId": "710000000000000402"
+      },
+      {
+        "sourceColumnName": "check_service_area",
+        "targetPropertyId": "710000000000000403"
+      },
+      {
+        "sourceColumnName": "check_plan_selected",
+        "targetPropertyId": "710000000000000404"
+      },
+      {
+        "sourceColumnName": "check_employment",
+        "targetPropertyId": "710000000000000405"
+      },
+      {
+        "sourceColumnName": "check_documents",
+        "targetPropertyId": "710000000000000406"
+      },
+      {
+        "sourceColumnName": "check_clinical",
+        "targetPropertyId": "710000000000000407"
+      },
+      {
+        "sourceColumnName": "check_enrollment_period",
+        "targetPropertyId": "710000000000000408"
+      },
+      {
+        "sourceColumnName": "eligibility_result",
+        "targetPropertyId": "710000000000000409"
+      },
+      {
+        "sourceColumnName": "review_reason",
+        "targetPropertyId": "710000000000000410"
+      },
+      {
+        "sourceColumnName": "routing_department",
+        "targetPropertyId": "710000000000000411"
+      },
+      {
+        "sourceColumnName": "notes",
+        "targetPropertyId": "710000000000000412"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "<WORKSPACE_ITEM_ID>",
+      "itemId": "<LAKEHOUSE_ITEM_ID>",
+      "sourceTableName": "eligibility"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "namespace": "usertypes",
+  "id": "710000000000000001",
+  "name": "applications",
+  "namespaceType": "Custom",
+  "baseEntityTypeId": null,
+  "visibility": "Visible",
+  "entityIdParts": [
+    "710000000000000101"
+  ],
+  "displayNamePropertyId": "710000000000000101",
+  "properties": [
+    {
+      "id": "710000000000000101",
+      "name": "application_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000102",
+      "name": "contact_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000103",
+      "name": "applicant_name",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000104",
+      "name": "region",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000105",
+      "name": "plan_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000106",
+      "name": "channel",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000107",
+      "name": "status",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000108",
+      "name": "priority",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000109",
+      "name": "owner",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000110",
+      "name": "days_waiting",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "BigInt"
+    },
+    {
+      "id": "710000000000000111",
+      "name": "period_label",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000112",
+      "name": "member_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [],
+  "description": "A single membership application. The hero entity — carries lifecycle status, priority, owner, days waiting, chosen plan and (once enrolled) the member number. Eligibility detail lives on the linked Eligibility entity.",
+  "synonyms": [
+    "application",
+    "enrollment",
+    "submission",
+    "case",
+    "request",
+    "intake"
+  ]
+}

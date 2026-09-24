@@ -1,0 +1,4 @@
+plan_id,plan_name,plan_tier,plan_type,monthly_premium,description
+PLN-01,Caldova Premium,Premium,PPO,520,"Comprehensive coverage with the lowest out-of-pocket costs, the widest provider network, and no referrals for specialists."
+PLN-02,Caldova Standard,Standard,EPO,340,Balanced coverage for everyday needs with a strong regional network and predictable copays.
+PLN-03,Caldova Essentials,Essentials,HMO,190,Affordable entry-level plan covering preventive and essential care with a curated local network.

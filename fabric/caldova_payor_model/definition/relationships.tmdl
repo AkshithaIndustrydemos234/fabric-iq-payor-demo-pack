@@ -1,0 +1,14 @@
+relationship 'contacts to applications'
+	fromColumn: applications.contact_id
+	toColumn: contacts.contact_id
+
+relationship 'plans to applications'
+	fromColumn: applications.plan_id
+	toColumn: plans.plan_id
+
+relationship 'applications to eligibility'
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: eligibility.application_id
+	toColumn: applications.application_id
+

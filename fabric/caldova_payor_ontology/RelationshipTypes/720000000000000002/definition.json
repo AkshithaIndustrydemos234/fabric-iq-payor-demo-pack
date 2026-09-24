@@ -1,0 +1,15 @@
+{
+  "namespace": "usertypes",
+  "id": "720000000000000002",
+  "name": "application_selects_plan",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "710000000000000001"
+  },
+  "target": {
+    "entityTypeId": "710000000000000003"
+  },
+  "sourcePropertyId": "710000000000000105",
+  "targetPropertyId": "710000000000000301",
+  "description": "Identifies the coverage plan chosen on the application; enables plan-mix and “which tier are applicants choosing” questions and grounds benefit answers."
+}

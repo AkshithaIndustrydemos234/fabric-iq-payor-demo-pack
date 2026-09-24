@@ -1,0 +1,38 @@
+{
+  "id": "f5fbf879-88c8-4a3d-b80a-01f5258a13ec",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "plan_id",
+        "targetPropertyId": "710000000000000301"
+      },
+      {
+        "sourceColumnName": "plan_name",
+        "targetPropertyId": "710000000000000302"
+      },
+      {
+        "sourceColumnName": "plan_tier",
+        "targetPropertyId": "710000000000000303"
+      },
+      {
+        "sourceColumnName": "plan_type",
+        "targetPropertyId": "710000000000000304"
+      },
+      {
+        "sourceColumnName": "monthly_premium",
+        "targetPropertyId": "710000000000000305"
+      },
+      {
+        "sourceColumnName": "description",
+        "targetPropertyId": "710000000000000306"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "<WORKSPACE_ITEM_ID>",
+      "itemId": "<LAKEHOUSE_ITEM_ID>",
+      "sourceTableName": "plans"
+    }
+  }
+}

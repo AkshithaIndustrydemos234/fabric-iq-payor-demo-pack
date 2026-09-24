@@ -1,0 +1,108 @@
+{
+  "namespace": "usertypes",
+  "id": "710000000000000004",
+  "name": "eligibility",
+  "namespaceType": "Custom",
+  "baseEntityTypeId": null,
+  "visibility": "Visible",
+  "entityIdParts": [
+    "710000000000000401"
+  ],
+  "displayNamePropertyId": "710000000000000401",
+  "properties": [
+    {
+      "id": "710000000000000401",
+      "name": "eligibility_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000402",
+      "name": "application_id",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000403",
+      "name": "check_service_area",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000404",
+      "name": "check_plan_selected",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000405",
+      "name": "check_employment",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000406",
+      "name": "check_documents",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000407",
+      "name": "check_clinical",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000408",
+      "name": "check_enrollment_period",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000409",
+      "name": "eligibility_result",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000410",
+      "name": "review_reason",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000411",
+      "name": "routing_department",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "710000000000000412",
+      "name": "notes",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [],
+  "description": "The eligibility result for one application, expressed as six named checks plus an overall result, the failing reason, routing department, and enriching notes. This is what Foundry reasons over: it reports each check, lands on the one that fails, and uses the note to explain why a human decides. One row per application.",
+  "synonyms": [
+    "eligibility",
+    "checks",
+    "verification",
+    "review",
+    "determination",
+    "screening"
+  ]
+}

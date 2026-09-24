@@ -1,0 +1,21 @@
+{
+  "id": "b4685bf1-3375-4b3e-b1e2-3608087f1323",
+  "dataBindingTable": {
+    "sourceType": "LakehouseTable",
+    "workspaceId": "<WORKSPACE_ITEM_ID>",
+    "itemId": "<LAKEHOUSE_ITEM_ID>",
+    "sourceTableName": "applications"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "application_id",
+      "targetPropertyId": "710000000000000101"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "plan_id",
+      "targetPropertyId": "710000000000000301"
+    }
+  ]
+}

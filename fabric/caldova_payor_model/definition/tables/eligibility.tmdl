@@ -1,0 +1,66 @@
+/// Eligibility result at one row per application; contains six checks, result, routing, and notes.
+table eligibility
+
+	column eligibility_id
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		summarizeBy: none
+		sourceColumn: eligibility_id
+
+	column application_id
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		summarizeBy: none
+		sourceColumn: application_id
+
+	column check_service_area
+		dataType: string
+		sourceColumn: check_service_area
+
+	column check_plan_selected
+		dataType: string
+		sourceColumn: check_plan_selected
+
+	column check_employment
+		dataType: string
+		sourceColumn: check_employment
+
+	column check_documents
+		dataType: string
+		sourceColumn: check_documents
+
+	column check_clinical
+		dataType: string
+		sourceColumn: check_clinical
+
+	column check_enrollment_period
+		dataType: string
+		sourceColumn: check_enrollment_period
+
+	column eligibility_result
+		dataType: string
+		sourceColumn: eligibility_result
+
+	column review_reason
+		dataType: string
+		summarizeBy: none
+		sourceColumn: review_reason
+
+	column routing_department
+		dataType: string
+		summarizeBy: none
+		sourceColumn: routing_department
+
+	column notes
+		dataType: string
+		summarizeBy: none
+		sourceColumn: notes
+
+	partition eligibility = entity
+		mode: directLake
+		source
+			entityName: eligibility
+			expressionSource: 'DirectLake - payor_model'
+

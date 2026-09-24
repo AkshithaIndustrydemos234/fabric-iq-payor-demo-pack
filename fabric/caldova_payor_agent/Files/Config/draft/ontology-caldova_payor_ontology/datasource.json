@@ -1,0 +1,6 @@
+{
+  "type": "ontology",
+  "workspaceId": "<WORKSPACE_ITEM_ID>",
+  "itemId": "<ONTOLOGY_ITEM_ID>",
+  "displayName": "caldova_payor_ontology"
+}

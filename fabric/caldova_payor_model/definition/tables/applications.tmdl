@@ -1,0 +1,68 @@
+/// Hero fact table at one row per application; contains lifecycle, status, priority, waiting-time, and period attributes.
+table applications
+
+	column application_id
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		summarizeBy: none
+		sourceColumn: application_id
+
+	column contact_id
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		summarizeBy: none
+		sourceColumn: contact_id
+
+	column applicant_name
+		dataType: string
+		sourceColumn: applicant_name
+
+	column region
+		dataType: string
+		sourceColumn: region
+
+	column plan_id
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		summarizeBy: none
+		sourceColumn: plan_id
+
+	column channel
+		dataType: string
+		sourceColumn: channel
+
+	column status
+		dataType: string
+		sourceColumn: status
+
+	column priority
+		dataType: string
+		sourceColumn: priority
+
+	column owner
+		dataType: string
+		sourceColumn: owner
+
+	column days_waiting
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: days_waiting
+
+	column period_label
+		dataType: string
+		sourceColumn: period_label
+
+	column member_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: member_id
+
+	partition applications = entity
+		mode: directLake
+		source
+			entityName: applications
+			expressionSource: 'DirectLake - payor_model'
+

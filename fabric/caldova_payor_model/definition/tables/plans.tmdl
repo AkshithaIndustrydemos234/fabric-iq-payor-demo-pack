@@ -1,0 +1,37 @@
+/// Product dimension at one row per plan; defines coverage tier and premium.
+table plans
+
+	column plan_id
+		dataType: string
+		isHidden
+		isAvailableInMdx: false
+		summarizeBy: none
+		sourceColumn: plan_id
+
+	column plan_name
+		dataType: string
+		sourceColumn: plan_name
+
+	column plan_tier
+		dataType: string
+		sourceColumn: plan_tier
+
+	column plan_type
+		dataType: string
+		sourceColumn: plan_type
+
+	column monthly_premium
+		dataType: decimal
+		sourceColumn: monthly_premium
+
+	column description
+		dataType: string
+		summarizeBy: none
+		sourceColumn: description
+
+	partition plans = entity
+		mode: directLake
+		source
+			entityName: plans
+			expressionSource: 'DirectLake - payor_model'
+

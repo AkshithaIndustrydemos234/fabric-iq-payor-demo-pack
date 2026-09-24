@@ -1,0 +1,51 @@
+eligibility_id,application_id,check_service_area,check_plan_selected,check_employment,check_documents,check_clinical,check_enrollment_period,eligibility_result,review_reason,routing_department,notes
+ELG-30001,APP-10001,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30002,APP-10002,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30003,APP-10003,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30004,APP-10004,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30005,APP-10005,Pass,Pass,Pass,Pass,Pass,Pass,Pending,,,Running eligibility verification
+ELG-30006,APP-10006,Pass,Pass,Pass,Pending,Pass,Pass,Pending,,,Chasing proof-of-address documents
+ELG-30007,APP-10007,Pass,Pass,Pass,Fail,Pass,Pass,Needs review,Legal interpretation required,Support,Divorce decree on file conflicts with the enrollment request; route to Support for legal interpretation before enrollment proceeds
+ELG-30008,APP-10008,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30009,APP-10009,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30010,APP-10010,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30011,APP-10011,Pass,Pass,Pass,Pending,Pass,Pass,Pending,,,Chasing proof-of-address documents
+ELG-30012,APP-10012,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30013,APP-10013,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30014,APP-10014,Pass,Pass,Pass,Pass,Fail,Pass,Needs review,Specialist sign-off required,Member Management,Awaiting cardiologist assessment before clinical clearance
+ELG-30015,APP-10015,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30016,APP-10016,Pass,Pass,Pass,Pending,Pass,Pass,Pending,,,Chasing proof-of-address documents
+ELG-30017,APP-10017,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30018,APP-10018,Fail,Pass,Pass,Pass,Pass,Pass,Needs review,Service area mismatch,Support,Applicant county falls outside supported region; confirm eligibility
+ELG-30019,APP-10019,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30020,APP-10020,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30021,APP-10021,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30022,APP-10022,Pass,Pass,Pass,Pending,Pass,Pass,Pending,,,Chasing employer confirmation
+ELG-30023,APP-10023,Fail,Pass,Pass,Pass,Pass,Pass,Needs review,Residency / relocation,Support,Two addresses on file after a recent move; verify current residency
+ELG-30024,APP-10024,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30025,APP-10025,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30026,APP-10026,Not started,Not started,Not started,Not started,Not started,Not started,Pending,,,Awaiting eligibility check
+ELG-30027,APP-10027,Pass,Pass,Pass,Pass,Pass,Fail,Needs review,SEP verification,Billing,Confirm qualifying life event within the 60-day special enrollment window
+ELG-30028,APP-10028,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30029,APP-10029,Pass,Pass,Pass,Pass,Pass,Pass,Pending,,,Running eligibility verification
+ELG-30030,APP-10030,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30031,APP-10031,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30032,APP-10032,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30033,APP-10033,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30034,APP-10034,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30035,APP-10035,Pass,Pass,Pass,Pending,Pass,Pass,Pending,,,Chasing proof-of-address documents
+ELG-30036,APP-10036,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30037,APP-10037,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30038,APP-10038,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30039,APP-10039,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30040,APP-10040,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30041,APP-10041,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30042,APP-10042,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30043,APP-10043,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30044,APP-10044,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30045,APP-10045,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30046,APP-10046,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30047,APP-10047,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30048,APP-10048,Not started,Not started,Not started,Not started,Not started,Not started,Pending,,,Awaiting eligibility check
+ELG-30049,APP-10049,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
+ELG-30050,APP-10050,Pass,Pass,Pass,Pass,Pass,Pass,Eligible,,,All eligibility checks passed
