@@ -529,3 +529,6 @@ Write-Host "     This metadata is not part of the ontology definition schema and
 Write-Host "     be deployed via API. It grounds the data agent's answers." -ForegroundColor Yellow
 Write-Host "  3. Select a predesigned task flow and assign items to tasks." -ForegroundColor Yellow
 Write-Host "     Task flow has no API surface." -ForegroundColor Yellow
+Write-Host "  4. Publish fabric data agent." -ForegroundColor Yellow
+
+
