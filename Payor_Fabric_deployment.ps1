@@ -18,7 +18,7 @@
 # =====================================================================
 
 # --- the only lines anyone edits ---
-$workspace = "Payor"
+$workspace = "Payor Demo"
 $capacity  = "f2westuscapacityq2"
 # -----------------------------------
 

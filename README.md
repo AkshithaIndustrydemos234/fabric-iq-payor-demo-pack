@@ -20,7 +20,7 @@ Complete every item below before you start.
 | Fabric Administrator role | Microsoft 365 admin center → Roles → Fabric Administrator | Assign it to the user running the deployment. Needed to change tenant settings. |
 | Tenant setting | Fabric Admin portal → Tenant settings | Enable **Users can create Ontology (preview) items**. |
 | Microsoft 365 E5 license | Microsoft 365 admin center → your license assignment | Assigned to the same user. |
-| Fabric capacity (F2) | `fab ls .capacities` | A paid F2 capacity, already assigned. Note the exact name. |
+| Fabric capacity (F2) — Capacity Administrator | `fab ls .capacities` | Paid F2 or higher. You must be a Fabric Capacity Administrator on it. Note the exact name for `$capacity`. |
 | PowerShell 7 | `pwsh --version` | Windows PowerShell 5.1 will not work. |
 | Python 3.12 | `py -3.12 --version` | Python 3.10 to 3.13 is supported (tested on 3.12). 3.14 is not supported. |
 | Fabric CLI | `fab --version` | `py -3.12 -m pip install ms-fabric-cli` |
