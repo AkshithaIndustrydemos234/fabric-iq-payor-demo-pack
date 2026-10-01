@@ -22,27 +22,27 @@ Complete every item below before you start.
 | Microsoft 365 E5 license | Microsoft 365 admin center → your license assignment | Assigned to the same user. |
 | Fabric capacity (F2) — Capacity Administrator | `fab ls .capacities` | Paid F2 or higher. You must be a Fabric Capacity Administrator on it. Note the exact name for `$capacity`. |
 | PowerShell 7 | `pwsh --version` | Windows PowerShell 5.1 will not work. |
-| Python 3.12 | `py -3.12 --version` | Python 3.10 to 3.13 is supported (tested on 3.12). 3.14 is not supported. |
-| Fabric CLI | `fab --version` | `py -3.12 -m pip install ms-fabric-cli` |
+| Python 3.12 | `py -3.12 --version` | Python 3.10 to 3.13 is supported (tested on 3.12 and 3.13). 3.14 is not supported. |
+| Fabric CLI | `fab --version` | `py -3.13 -m pip install ms-fabric-cli` |
 
-> ⚠️ **Install Python 3.12, not the latest release.**
+> ⚠️ **Install Python 3.13, not the latest release.**
 > The Fabric CLI fails to install on Python 3.14 — it tries to compile a dependency and asks for Visual C++ Build Tools.
 
-### Installing Python 3.12
+### Installing Python 3.13
 
 1. Download the Windows installer (64-bit) from [python.org](https://www.python.org/downloads/release/python-3120/) and run it.
 2. On the first screen, tick **Add python.exe to PATH**. Do not click **Install Now** yet.
 3. Click **Customize installation**, then **Next** on **Optional Features**.
 4. On **Advanced Options**, make sure **Add Python to environment variables** is ticked, then click **Install**.
 
-Already installed without that option? Run the installer again (or **Settings → Apps → Python 3.12 → Modify**), choose **Modify**, click **Next**, tick **Add Python to environment variables**, then **Install**.
+Already installed without that option? Run the installer again (or **Settings → Apps → Python 3.13 → Modify**), choose **Modify**, click **Next**, tick **Add Python to environment variables**, then **Install**.
 
 ### Installing the Fabric CLI
 
-Install the CLI under Python 3.12, even if a newer Python is also on the machine:
+Install the CLI under Python 3.13, even if a newer Python is also on the machine:
 
 ```powershell
-py -3.12 -m pip install ms-fabric-cli
+py -3.13 -m pip install ms-fabric-cli
 ```
 
 Then open a new terminal and confirm with `fab --version`.
