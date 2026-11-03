@@ -22,7 +22,7 @@ Complete every item below before you start.
 | Microsoft 365 E5 license | Microsoft 365 admin center → your license assignment | Assigned to the same user. |
 | Fabric capacity (F2) — Capacity Administrator | `fab ls .capacities` | Paid F2 or higher. You must be a Fabric Capacity Administrator on it. Note the exact name for `$capacity`. |
 | PowerShell 7 | `pwsh --version` | Windows PowerShell 5.1 will not work. |
-| Python 3.12 | `py -3.12 --version` | Python 3.10 to 3.13 is supported (tested on 3.12 and 3.13). 3.14 is not supported. |
+| Python 3.13 | `py -3.13 --version` | Python 3.10 to 3.13 is supported (tested on 3.12 and 3.13). 3.14 is not supported. |
 | Fabric CLI | `fab --version` | `py -3.13 -m pip install ms-fabric-cli` |
 
 > ⚠️ **Install Python 3.13, not the latest release.**
