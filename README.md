@@ -7,7 +7,7 @@ Deploys a complete Fabric IQ payor demo into your own tenant. Edit two lines, ru
 | **You edit** | 2 lines in `Payor_Fabric_deployment.ps1` — workspace name and capacity name |
 | **You run** | One PowerShell command |
 | **You get** | Workspace, 4 folders, lakehouse, 4 tables, semantic model, ontology, data agent, notebook, pipeline |
-| **Afterwards** | 2 required steps in the Fabric portal (about 5 minutes) |
+| **Afterwards** | Finish the setup in the portal |
 
 ---
 
@@ -21,28 +21,31 @@ Complete every item below before you start.
 | Tenant setting | Fabric Admin portal → Tenant settings | Enable **Users can create Ontology (preview) items**. |
 | Microsoft 365 E5 license | Microsoft 365 admin center → your license assignment | Assigned to the same user. |
 | Fabric capacity (F2) — Capacity Administrator | `fab ls .capacities` | Paid F2 or higher. You must be a Fabric Capacity Administrator on it. Note the exact name for `$capacity`. |
+| Microsoft.Fabric resource provider | Azure portal → Subscriptions → your subscription → Settings → Resource providers | Register `Microsoft.Fabric` on the Azure subscription that hosts your Fabric capacity. The status must show **Registered** before you run the script. |
+| Microsoft.Quota resource provider | Azure portal → Subscriptions → your subscription → Settings → Resource providers | Register `Microsoft.Quota` on the same subscription. The status must show **Registered** before you run the script. |
 | PowerShell 7 | `pwsh --version` | Windows PowerShell 5.1 will not work. |
-| Python 3.13 | `py -3.13 --version` | Python 3.10 to 3.13 is supported (tested on 3.12 and 3.13). 3.14 is not supported. |
-| Fabric CLI | `fab --version` | `py -3.13 -m pip install ms-fabric-cli` |
+| Python 3.14 | `py --version` | Python 3.10 to 3.14 is supported |
+| Fabric CLI | `fab --version` | `py -3.14 -m pip install ms-fabric-cli` |
+| pip-system-certs  | `py -3.14 -m pip show pip-system-certs` | `py -3.14 -m pip install pip-system-certs` |
 
-> ⚠️ **Install Python 3.13, not the latest release.**
-> The Fabric CLI fails to install on Python 3.14 — it tries to compile a dependency and asks for Visual C++ Build Tools.
 
-### Installing Python 3.13
+> ⚠️ **Install Python 3.14**
 
-1. Download the Windows installer (64-bit) from [python.org](https://www.python.org/downloads/release/python-3120/) and run it.
+### Installing Python 3.14
+
+1. Download the Windows installer (64-bit) from [python.org](https://www.python.org/downloads/release/python-3140/) and run it.
 2. On the first screen, tick **Add python.exe to PATH**. Do not click **Install Now** yet.
 3. Click **Customize installation**, then **Next** on **Optional Features**.
 4. On **Advanced Options**, make sure **Add Python to environment variables** is ticked, then click **Install**.
 
-Already installed without that option? Run the installer again (or **Settings → Apps → Python 3.13 → Modify**), choose **Modify**, click **Next**, tick **Add Python to environment variables**, then **Install**.
+Already installed without that option? Run the installer again (or **Settings → Apps → Python 3.14 → Modify**), choose **Modify**, click **Next**, tick **Add Python to environment variables**, then **Install**.
 
 ### Installing the Fabric CLI
 
-Install the CLI under Python 3.13, even if a newer Python is also on the machine:
+Install the CLI under Python 3.14.
 
 ```powershell
-py -3.13 -m pip install ms-fabric-cli
+py -3.14 -m pip install ms-fabric-cli
 ```
 
 Then open a new terminal and confirm with `fab --version`.
@@ -97,8 +100,8 @@ Open `Payor_Fabric_deployment.ps1` and edit the two values at the top:
 
 ```powershell
 # --- the only lines anyone edits ---
-$workspace = "Payor"
-$capacity  = "f2westuscapacityq2"
+$workspace = "YOUR WORKSPACE NAME"
+$capacity  = "YOUR CAPACITY NAME"
 # -----------------------------------
 ```
 
@@ -135,31 +138,20 @@ Four steps cannot be deployed through the API. Saving the graph model and publis
 
 | Step | Task | Priority |
 |---|---|---|
-| 1 | Save the graph model | **Required** |
-| 2 | Publish the data agent | **Required** for Microsoft 365 Copilot |
-| 3 | Add descriptions and synonyms | Recommended |
-| 4 | Apply a task flow | Optional |
-
-### Step 1 — Save the graph model — **Required**
-
-> The data agent will not answer questions until this is done. It replies that the graph model is not ready.
-
-1. Open the graph model created alongside the ontology in your new workspace.
-2. Click **Save**. Change nothing.
-3. Wait for the data to finish loading.
-
-A graph model created through the API is structurally complete but not queryable until it is opened and saved once in the portal.
+| 1 | Add descriptions and synonyms | Recommended |
+| 2 | Apply a task flow | Optional |
+| 3 | Publish the data agent | **Required** for Microsoft 365 Copilot |
 
 
-### Step 2 — Add descriptions and synonyms — **Recommended**
+### Step 1 — Add descriptions and synonyms — **Recommended**
 
 Open the ontology and add a description and synonyms to each entity type and relationship type. This is the business vocabulary the data agent uses to interpret questions — answers are noticeably weaker without it.
 
-### Step 3 — Apply a task flow — **Optional**
+### Step 2 — Apply a task flow — **Optional**
 
 In the workspace list view: **Select a predesigned task flow** → **Medallion** → assign the deployed items to tasks. Purely presentational.
 
-### Step 4 — Publish the data agent — **Required for Microsoft 365 Copilot**
+### Step 3 — Publish the data agent — **Required for Microsoft 365 Copilot**
 
 1. Open the data agent in your Fabric workspace.
 2. Select **Publish**. A dialog opens.
@@ -218,8 +210,6 @@ A weak or generic answer usually means the ontology descriptions and synonyms ha
 
 | Issue | Cause | Fix |
 |---|---|---|
-| `pip install ms-fabric-cli` fails asking for Microsoft Visual C++ 14.0 or greater, or `fab` is not recognized | Python 3.14 is installed. The CLI has a dependency with no prebuilt package for 3.14, so pip tries to compile it. | Install Python 3.12 and install the CLI under it. Do not install Visual C++ Build Tools. |
-| The data agent replies that the graph model is not ready | The graph model has not been opened and saved in the portal. | Complete **Step 1** in section 6. |
 | The run stops at stage 1 with an ID-resolution error | The workspace name in `$workspace` already exists. The script cannot reuse an existing workspace. | Set `$workspace` to a new name and run again. |
 | Repeated "Capacity busy. Waiting 90 seconds…" lines | The capacity is throttling. | Normal for up to five attempts. If all five fail, the run stops — try again with a new workspace name once the capacity is less busy. |
 

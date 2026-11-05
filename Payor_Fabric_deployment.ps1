@@ -18,8 +18,8 @@
 # =====================================================================
 
 # --- the only lines anyone edits ---
-$workspace = "Payor Demo"
-$capacity  = "f2westuscapacityq2"
+$workspace = "YOUR WORKSPACE NAME"
+$capacity  = "YOUR CAPACITY NAME"
 # -----------------------------------
 
 $ErrorActionPreference = "Continue"
@@ -520,15 +520,11 @@ Write-Host "  $folderInsights    -> $modelName, $ontologyName"    -ForegroundCol
 Write-Host "  $folderOperational -> $agentName"                   -ForegroundColor Green
 
 Write-Host "`nMANUAL STEPS REQUIRED" -ForegroundColor Yellow
-Write-Host "  1. Open the ontology's graph model in the Fabric portal and click Save." -ForegroundColor Yellow
-Write-Host "     A graph model created entirely via REST API is not queryable until the" -ForegroundColor Yellow
-Write-Host "     portal provisions its loading infrastructure on first open. Until then" -ForegroundColor Yellow
-Write-Host "     the data agent reports 'graph model not ready'." -ForegroundColor Yellow
-Write-Host "  2. Add entity and relationship descriptions and synonyms in the portal." -ForegroundColor Yellow
+Write-Host "  1. Add entity and relationship descriptions and synonyms in the portal." -ForegroundColor Yellow
 Write-Host "     This metadata is not part of the ontology definition schema and cannot" -ForegroundColor Yellow
 Write-Host "     be deployed via API. It grounds the data agent's answers." -ForegroundColor Yellow
-Write-Host "  3. Select a predesigned task flow and assign items to tasks." -ForegroundColor Yellow
+Write-Host "  2. Select a predesigned task flow and assign items to tasks." -ForegroundColor Yellow
 Write-Host "     Task flow has no API surface." -ForegroundColor Yellow
-Write-Host "  4. Publish fabric data agent." -ForegroundColor Yellow
+Write-Host "  3. Publish fabric data agent." -ForegroundColor Yellow
 
 
